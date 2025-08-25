@@ -61,7 +61,7 @@ dependencies = [
     "GitPython>=3.1.41", # for logging
     "datasets>=4.0.0",
     "pydantic",
-    "numpy>=2",  # pinned to avoid incompatibilities
+    "numpy==1.23.5",  # pinned to avoid incompatibilities
     "hf-xet>=1.1.8",  # pinned to avoid failing test suite
     # Prettiness
     "typer",
@@ -107,8 +107,6 @@ extended_tasks = [
 ]
 s3 = ["s3fs"]
 multilingual = [
-    "stanza",
-    "spacy[ja,ko,th]",
     "jieba", # for chinese tokenizer
     "pyvi", # for vietnamese tokenizer
 ]
