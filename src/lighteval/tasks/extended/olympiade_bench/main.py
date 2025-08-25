@@ -232,7 +232,7 @@ for subset in olympiad_bench_subsets:
             evaluation_splits=["train"],
             few_shots_split="train",
             few_shots_select="random_sampling",
-            generation_size=2048,
+            generation_size=32768,
             stop_sequence=[],  # no stop sequence, will use eot token
             version=1,
         )

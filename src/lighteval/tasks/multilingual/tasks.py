@@ -3275,7 +3275,7 @@ cmath_tasks = [
         hf_subset="default",
         evaluation_splits=("test",),
         few_shots_split="validation",
-        generation_size=25,
+        generation_size=32768,
         metrics=[
             MultilingualQuasiExactMatchMetric(Language.CHINESE, "full"),
         ],

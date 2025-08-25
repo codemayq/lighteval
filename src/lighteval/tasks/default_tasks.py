@@ -437,7 +437,7 @@ aime24_gpassk = LightevalTaskConfig(
     evaluation_splits=["train"],
     few_shots_split=None,
     few_shots_select=None,
-    generation_size=8192,
+    generation_size=32768,
     metrics=[Metrics.g_pass_at_k_math(sample_params={"k": 16, "n": 48})],
     version=1,
 )
@@ -451,7 +451,7 @@ aime25 = LightevalTaskConfig(
     evaluation_splits=["train"],
     few_shots_split=None,
     few_shots_select=None,
-    generation_size=10000,
+    generation_size=32768,
     metrics=[Metrics.pass_at_k_math(sample_params={"k": 1, "n": 1})],
     version=2,
 )
@@ -465,8 +465,8 @@ aime25_gpassk = LightevalTaskConfig(
     evaluation_splits=["train"],
     few_shots_split=None,
     few_shots_select=None,
-    generation_size=8192,
-    metrics=[Metrics.g_pass_at_k_math(sample_params={"k": 16, "n": 48})],
+    generation_size=32768,
+    metrics=[Metrics.g_pass_at_k_math(sample_params={"k": 8, "n": 8})],
     version=1,
 )
 anachronisms_bigbench = LightevalTaskConfig(
@@ -8579,7 +8579,7 @@ gsm8k_leaderboard = LightevalTaskConfig(
     evaluation_splits=["test"],
     few_shots_split=None,
     few_shots_select="random_sampling_from_train",
-    generation_size=256,
+    generation_size=32768,
     metrics=[
         Metrics.exact_match(sample_params={"normalize_gold": gsm8k_normalizer, "normalize_pred": gsm8k_normalizer})
     ],
@@ -8596,7 +8596,7 @@ gsm8k_lighteval = LightevalTaskConfig(
     evaluation_splits=["test"],
     few_shots_split=None,
     few_shots_select="random_sampling_from_train",
-    generation_size=256,
+    generation_size=32768,
     metrics=[
         Metrics.expr_gold_metric,
     ],
@@ -11121,7 +11121,7 @@ mgsm_zh_lighteval = LightevalTaskConfig(
     evaluation_splits=["test"],
     few_shots_split=None,
     few_shots_select=None,
-    generation_size=None,
+    generation_size=32768,
     metrics=[
         Metrics.exact_match,
         Metrics.exact_match(sample_params={"normalize_gold": helm_normalizer, "normalize_pred": helm_normalizer}),
